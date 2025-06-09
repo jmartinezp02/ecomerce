@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShockWave - Tu Tienda de Tecnología</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>ShockWave</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="servicio-tecnico.html">Servicio Técnico</a>
+                <a href="acerca-de.html">Acerca de</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/slider/slide1.jpg" alt="Apple Products">
+                    <div class="slide-content">
+                        <h2>Descubre la Innovación Apple</h2>
+                        <p>Las últimas novedades en tecnología</p>
+                        <a href="productos.html" class="btn">Ver Productos</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/slider/slide2.jpg" alt="Gaming Consoles">
+                    <div class="slide-content">
+                        <h2>Consolas de Última Generación</h2>
+                        <p>PlayStation, Xbox y Nintendo Switch</p>
+                        <a href="productos.html" class="btn">Explorar</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/slider/slide3.jpg" alt="PC Gaming">
+                    <div class="slide-content">
+                        <h2>PC Gaming</h2>
+                        <p>Equipos de alto rendimiento</p>
+                        <a href="productos.html" class="btn">Descubrir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <h2>Categorías Destacadas</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="img/categorias/apple.jpg" alt="Apple">
+                <h3>Apple</h3>
+            </div>
+            <div class="category-card">
+                <img src="img/categorias/consolas.png" alt="Consolas">
+                <h3>Consolas</h3>
+            </div>
+            <div class="category-card">
+                <img src="img/categorias/PC.jpg" alt="PC">
+                <h3>PC Gaming</h3>
+            </div>
+            <div class="category-card">
+                <img src="img/categorias/movil.jpg" alt="Móviles">
+                <h3>Móviles</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <h2>Productos Destacados</h2>
+        <div class="product-grid">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Suscríbete a nuestro Newsletter</h2>
+            <p>Recibe las últimas novedades y ofertas exclusivas</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico">
+                <button type="submit" class="btn">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShockWave</h3>
+                <p>Tu tienda de confianza en tecnología</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="servicio-tecnico.html">Servicio Técnico</a></li>
+                    <li><a href="acerca-de.html">Acerca de</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: info@ShockWave.com</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ShockWave. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span>$0.00</span></p>
+            <button class="btn checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

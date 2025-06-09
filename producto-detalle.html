@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto - ShockWave</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .product-detail {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 70px;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .product-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .product-info h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .product-description {
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .product-actions button {
+            flex: 1;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>ShockWave</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="servicio-tecnico.html">Servicio Técnico</a>
+                <a href="acerca-de.html">Acerca de</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Detail Section -->
+    <main class="product-detail">
+        <div class="product-container">
+            <div class="product-image">
+                <img id="product-image" src="" alt="">
+                <span id="product-badge" class="product-badge"></span>
+            </div>
+            <div class="product-info">
+                <h1 id="product-name"></h1>
+                <p id="product-price" class="product-price"></p>
+                <p id="product-description" class="product-description"></p>
+                <div class="product-actions">
+                    <button class="btn add-to-cart" id="add-to-cart">Añadir al Carrito</button>
+                    <button class="btn" onclick="window.history.back()">Volver</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShockWave</h3>
+                <p>Tu tienda de confianza en tecnología</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="servicio-tecnico.html">Servicio Técnico</a></li>
+                    <li><a href="acerca-de.html">Acerca de</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: info@ShockWave.com</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ShockWave. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Sample Products Data (same as in productos.html)
+        const products = [
+            {
+                id: 1,
+                name: 'iPhone 13 Pro',
+                price: 999.99,
+                image: 'img/Catalogo/iphone 13.jpg',
+                category: 'apple',
+                description: 'El último iPhone con cámara profesional y chip A15 Bionic.',
+                badge: 'Nuevo'
+            },
+            {
+                id: 2,
+                name: 'PlayStation 5',
+                price: 499.99,
+                image: 'img/Catalogo/playstation5pro.jpg',
+                category: 'consolas',
+                description: 'La consola de próxima generación de Sony con gráficos 4K.',
+                badge: 'Popular'
+            },
+            {
+                id: 3,
+                name: 'Gaming PC Pro',
+                price: 1499.99,
+                image: 'img/Catalogo/hp victus.jpg',
+                category: 'pc',
+                description: 'PC Gaming de alto rendimiento con RTX 3080.',
+                badge: 'Oferta'
+            },
+            {
+                id: 4,
+                name: 'Samsung Galaxy S21',
+                price: 799.99,
+                image: 'img/Catalogo/galaxy s24 ultra.jpg',
+                category: 'moviles',
+                description: 'Smartphone Android con cámara de 108MP.',
+                badge: 'Destacado'
+            }
+        ];
+
+        // Load Product Details
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('id'));
+            const product = products.find(p => p.id === productId);
+
+            if (product) {
+                document.title = `${product.name} - ShockWave`;
+                document.getElementById('product-image').src = product.image;
+                document.getElementById('product-image').alt = product.name;
+                document.getElementById('product-name').textContent = product.name;
+                document.getElementById('product-price').textContent = `$${product.price}`;
+                document.getElementById('product-description').textContent = product.description;
+                
+                if (product.badge) {
+                    document.getElementById('product-badge').textContent = product.badge;
+                } else {
+                    document.getElementById('product-badge').style.display = 'none';
+                }
+
+                // Add to cart functionality
+                document.getElementById('add-to-cart').addEventListener('click', () => {
+                    addToCart(product);
+                });
+            } else {
+                window.location.href = 'productos.html';
+            }
+        });
+    </script>
+</body>
+</html> 
